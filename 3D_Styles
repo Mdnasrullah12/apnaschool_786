@@ -1,0 +1,110 @@
+<!-- !! -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+     <title>3D_style</title>
+     <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            /* height: 100?%; */
+            height: 100%;
+            /* width: 100%$; */
+            /* width: 100%^; */
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            overflow-y: scroll;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid blueviolet;
+        }
+        .item{
+            /* /* */
+             /* padding: 2.5rem; */
+             /* align-items: center; */
+             /* margin: 1.t; */
+             /* , */
+             margin: 1.6rem;
+
+             /* justify-content: center; */
+             padding: 1rem;
+            /* heigh
+            
+            t: 200px;  */
+            height: 100px;
+           /* j/j*/
+
+
+            /* width: 250px; */
+            width: 130px;
+            background-color: blueviolet;
+            border: 2px solid rebeccapurple;
+        }
+        #RotateX:hover{
+            /* transform:rotateX('angle') ; */
+            transform: rotateX(50deg);
+        }
+        #RotateY:hover{
+            transform: rotateY(60deg);
+        }
+        /* #Rotate */
+        /* #Roteta */
+        #RoteteZ:hover{
+            /* T */
+            transform: rotateZ(45deg);
+        }
+        /* #tranTransformX */
+        /* #translatet */
+        #translateX:hover{
+            transform: translateX(45deg);
+        }
+        #translateZ:hover{
+            transform: translateZ(45deg);
+            /* translateY(50deg); */
+        }
+        #scaleX:hover{
+            /* transform: scaleX(56deg); */
+            transform: scaleX(1.6);
+        }
+        #scaleY:hover{
+            transform: scaleY(2);
+            /* transform: sca; */
+            /* transform: perspective(350px) rotateY('angle'); */
+            transform: perspective(300px) scaleY(4) skewY(40deg) rotateY(-300deg);
+        }
+        /* #tr */
+     </style>
+ </head>
+ <body>
+    <div class="container">
+        <div class="item" id="RotateX">RotateX</div>
+        <div class="item" id="RotateY">RotateY</div>
+        <div class="item" id="RoteteZ">RoteteZ</div>
+      <!-- d -->
+       <div class="item" id="translateX">translateX</div>
+        <!-- <div class="item" id="TransformYi">TransformYi</div> -->
+         <div class="item" id="translateY">translateY</div>
+        <!-- <div class="item" id="TransformZ">TransformZ</div> -->
+         <div class="item" id="translateZ">TranslateZ</div>
+        <!-- <div class="item" id="ScaleX">ScaleX</div> -->
+         <div class="item" id="scaleX">scaleX</div>
+        <!-- <div class="item" id="ScaleY">ScaleY</div> -->
+         <!-- .ite, -->
+          <!-- / -->
+           <div class="item" id="scaleY">scaleY</div>
+        <div class="item" id="ScaleZ">ScaleZ</div>
+    </div>
+
+ </body>
+ </html>
