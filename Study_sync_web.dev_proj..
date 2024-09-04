@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            overflow-y: scroll;
+            /* display: flex; */
+            
+        }
+        .main-head{
+            /* display: flex; */
+            font-size: 2.3rem;
+            font-weight: 1200;
+            padding: 2rem;
+            text-align: center;
+            /* align-items: center; */
+        }
+        .f1-container{
+            /* display: flex; */
+           padding: 50px;
+           margin: 70px;
+           border: 2px solid black;
+           width: 30%;
+           height: 30%;
+        }
+        .f-header{
+            /* display: flex; */
+            font-size: 1em;
+            font-weight: bold;
+            font-style: normal;
+            gap: 1rem;
+        }
+        .img-data{
+            /* height: 100px; */
+            /* width: 100px; */
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .img-logo{
+            /* display: flex; */
+            height: 100px;
+            width: 100px;
+            border-radius: 2rem;
+            justify-content: center;
+            align-items: center;
+            border: 2px  solid black;
+            
+        }
+        .name-f{
+            text-align: center;
+            font-size: 1.8rem;
+
+            font-weight: 700;
+        }
+        .f-para{
+            text-align: center;
+            font-size: medium;
+            font-weight: 600;
+        }
+        .mid-container{
+            /* display: flex; */
+            width: 30%;
+            height: 30%;
+            border: 2px solid;
+            padding: 60px;
+            margin: 60px;
+
+        }
+        .mid-header{
+            font-size: 1rem;
+            font-weight: 800;
+            row: 3;
+            text-align: center;
+
+        }
+        .img-2{
+            display: flex;
+            padding: 10px;
+            margin: 10px;
+            align-items:center;
+            justify-content: center;
+
+        }
+       
+        .second-image{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 3rem;
+            /* align-items: center; */
+            /* justify-content: center; */
+            /* display: flex; */
+
+        }
+        .name-s{
+            font-size: 3.1rem;
+            font-weight: 800;
+            text-align: center;
+        }
+        .sec-para{
+            font-size: 1.7rem;
+            font-weight: 700;
+            text-align: center;
+            font-style: normal;
+            transform: rotateX(45deg);
+        }
+        .last-container{
+            /* display: flex; */
+            height: 30%;
+            width: 30%;
+            padding: 60px;
+            margin: 60px;
+            border:2px solid black ;
+            
+
+        }
+        .last-heading{
+            font-size: 1rem;
+            font-weight: 800;
+            column-gap: 1.4rem;
+            font-style: normal;
+            padding-bottom: 20px;
+            text-align: center;
+
+        }
+       
+        .last-img{
+            display: flex;
+            /* display: flex; */
+            padding: 10px;
+            margin: 10px;
+            align-items:center;
+            justify-content: center;
+        }
+        .salman-bhoy{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="main-head">what others say about us</h2>
+        <div class="main-container">
+        
+        <div class="f1-container">
+            <div class="heading">
+                <p class="f-header">
+                some arguments of this topic for real world problem 
+                content and realistic data for analysisg
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto repe
+                llendus voluptatem nobis adipisci quae corporis deserunt et aliquam? Porro dignissimos aspernatur voluptatem fugit commodi laboriosam repudiandae nisi maiores esse dolore.
+                </p>
+                <div class="img-data">
+                <img src="photo.JPG" alt="image" srcset="" class="img-logo">
+                </div>
+                <h3 class="name-f">MD NASRULLAH</h3>
+                <p class="f-para">he is a present in btech at haldiua institute of technology</p>
+            </div>
+            </div>
+            <div class="mid-container">
+                <div class="heading-parag">
+                    <p class="mid-header">
+                    study about this topic for help some arguments topiic and he is a very talented guys for americans ressler
+                    related things of margin how to everynthing is cleared this topic but some topic 
+                    is again and agin revise 
+                    </p>
+                    <div class="img-2">
+                    <img src="download (3).jpeg" alt="image-frame" srcset="" class="second-image">
+                    </div>
+                       <h3 class="name-s">mark_danis</h3>
+                    <p class="sec-para">
+                        present
+                        regarding query of  this topic how to crack of this 
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="last-container">
+            <div class="l-heading">
+                <p class="last-heading">
+                    study about part of life at time change life use format of knowledge and data 
+                    help of life data cycling process so use positive gain and spend of data
+                </p>
+                <div class="last-img">
+
+                <img src="sultan.jpg" alt="imge-last" srcset="" class="salman-bhoy">
+                <h3 class="name-l">salauddin ayyubi</h3>
+                <p class="last-para">he is great khalifa of ottomon umpire</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
