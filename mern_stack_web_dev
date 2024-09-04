@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* height: ; */
+            padding: 0;
+            margin: 0;
+
+        }
+        body{
+        
+            height: 100vh;
+            width: 100vw;
+        }
+        .content{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            background-color: rgb(156, 27, 27);
+
+        }
+        .main-content{
+            padding: 100px;
+            margin: 90px;
+            background-color: blue;
+
+        }
+        .left-content{
+            display: flex;
+          
+            padding: 10px;
+            margin: 10px;
+            /* width: 50%; */
+            height: 40%;
+            width: 50%;
+
+
+        }
+        .img-content{
+            display: flex;
+            /* height: 100%; */
+            margin: 10px;
+            /* width: 100%; */
+            background-color: aquamarine;
+        }
+        .news_letter{
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="main-content">
+            <div class="left-content">
+                <div class="img-content">
+                <img src="news_letter.img" alt="news" srcset="" class="news_letter">
+
+                </div>
+            </div>
+            <div class="right-content">
+                <div>
+                <h1 class="right-header">
+                    Get the latest updates 
+                </h1>
+                <p class="right-para">sign up our newsletter</p>
+                <button type="button" class="send-button">Send</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
