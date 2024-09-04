@@ -1,0 +1,274 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        body{
+            width: 100%;
+
+            height: 100%;
+            /* background-color: rgb(202, 202, 224); */
+        }
+        .container{
+            /* height: 100%; */
+            /* height: 100vh; */
+            /* width: 100vw; */
+
+            height: 100%;
+            width: 100%;
+            /* background-color: burlywood; */
+        }
+        .header-container{
+            height: 100%;
+            /* width: 100vh; */
+            width: 100%;
+            /* background-color: blue; */
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .logo-img{
+            height: 50px;
+            gap: .2rem;
+            /* padding: 1rem; */
+            margin-left: 1rem;
+            margin-top:1rem ;
+            /* margin: 1rem 1rem; */
+            border: 1px solid bisque;
+            /* border-radius: .1rem; */
+            /* border-radius: 14px; */
+            border-radius:32px ;
+        }
+        .logo-text{
+            /* margin-bottom: 1rem; */
+            /* padding-bottom: 2rem; */
+            margin-bottom: 3rem;
+            /* display: block; */
+            display: flex;
+            /* display: block; */
+            /* margin-top: 2rem; */
+            /* font-size: 4rem; */
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .nav{
+            display: flex;
+            text-align: center;
+            gap: 1rem;
+            /* gap: 3rem; */
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        /* .nav-link */
+        .nav:hover{
+            color: rgb(3, 66, 66);
+
+        }
+        .contact-button{
+            background-color: rgb(60, 42, 174);
+            border: 1px solid wheat;
+
+            /* border-radius: .3repx; */
+            border-radius: 1rem;
+            padding: .241rem;
+            margin: 1.2rem;
+            color: aliceblue;
+            /* height: 1,; */
+            height: 1.3rem;
+
+
+            display:none;
+            /* height: 4rem; */
+
+        }
+        /* . */
+        @media  screen and (min-width:800px) {
+            .contact-button{
+                display: block;
+            }
+
+            
+   /* /d */
+        .main-section{
+            max-width: 1300px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            /* padding: 0.8 rerea; */
+            padding: .8rem;
+            margin: auto;
+        }
+        .content-left{
+            text-align: center;
+            animation: slideFromLeft is ease forwards;
+            /* op; */
+            opacity: 0;
+        }
+        @keyframes slideFromLeft{
+            0%{
+                opacity: 0;
+                transform: translate(-19%);
+            }
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        .section-label{
+            font-size: 1.2rem;
+            font-weight: 600;
+            /* color: azure; */
+            /* margin: 1.3rem; */
+            margin: .4rem;
+            /* padding: 1.4rem; */
+            /* padding.5rem: ; */
+            padding: .5rem;
+            color: black;
+        }
+        .section0-title{
+            font-size: 3rem;
+            /* padding: 2rem; */
+            /* color: aliceblue; */
+            color: rgb(31, 26, 26);
+            padding: .2rem;
+            /* margin: 1.3rem; */
+            margin: .4rem;
+        }
+        .section-descriptionv{
+            display: flex;
+            margin: 1.2rem;
+            padding: 1.3rem;
+            font-size: .31rem
+            /* font-weidth: */
+            /* font-s  */
+            font-weight:700;
+            gap: 1rem;
+
+            .
+
+
+        }
+        .button-group{
+            display: flex;
+            justify-content: center;
+            /* align-items: centerga; */
+            align-items: center;
+            /* gap: 2rem; */
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .button-type{
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+            padding-bottom: .73rem;
+            border: 1px solid black;
+
+            max-height: 2rem;
+            max-width: 4rem;
+            background-color: blue;
+            font-size: 0.9731rem
+            padding: .75rem 1.5rem;
+            /* text- */
+            /* alig */
+            /* h */
+            /* margin-: */
+            /* marg */
+
+
+        }
+        .Take-over{
+            /* d */
+            /* height: ;max-height: 2rem; */
+            height: 2rem;
+            /* justify-content: 1space-between; */
+            /* justify-content: center; */
+
+            display: flexbox;
+            max-width: 4rem;
+            background-color: blue;
+            font-size: .731rem
+            padding:0.7rem 1.5rem;
+            transform:all .1s;
+            margin: 1rem;
+            /* hei */
+            /* margi */
+            /* ma */
+        }
+   /* d */
+     </style>
+    <title>Document</title>
+</head>
+<body>
+    .container
+      <header class="conytani"></header> 
+      <div class="container">
+
+      <!-- </div>
+      <header class="header-container"> -->
+        <!-- <div class="header-container"> -->
+            <a href="#logo" class="logo">
+
+          /* d */
+          <img src="/IMG_20220109_224140.jpg" class="logo-img" alt="" srcset="">
+            <span class="logo-text">studySync</span>
+        </a>
+
+
+            <nav class="nav" alt="nav-link" >
+                <a href="#home" class="home-link">Home</a>
+                <a href="#Feature" class="feature-link">Feature</a>
+                <a href="#Pricing" class="Blog-llink">Blog</a>
+                <a href="#About" class="About-link">About</a>
+            </nav>
+            <!-- <a href="#contact" class="ci"></a> -->
+       /* d */
+              <a href="#contact" type="button" class="contact-button">contact-Us</a>
+
+              </header>
+       <!-- d -->
+        <!-- .contem -->
+         <div class="content">
+            <section class="main-section>
+            <div class="content-left">
+                <p class="section-label">
+                    very proud to introduce
+                </p>
+                <!-- j -->
+                 <h1 class="section0-title"
+                 >seamless vry proud to future</h1>
+                 <p class="section-descriptionv">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea mollitia hic sequi. Explicabo repellendus fugiat repellat alias consectetur dolorem praesentium, fuga, similique numquam quas, perspiciatis ab expedita soluta qui corrupti!lorem
+ 
+
+                 </p>
+                 <div class="button-group">
+                    /* </div> */
+                 <button type="button" class="button-type">Button-start</button>
+                 <button type="button" class="Take-over">Take-over</button>
+                 /* > */
+                 </div>
+
+            </div>
+            <div class="content-right">
+                <!-- <img src="/photo.jpg" alt="" srcset=""> -->
+                 <div class="image-contyainer">
+                    <img src="/download (1).jpeg" alt="" srcset="">
+                 </div>
+            </div>
+            </section>
+
+         </div>
+
+    
+</body>
+</html>   -->
