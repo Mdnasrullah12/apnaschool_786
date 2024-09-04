@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+     <title>cards_project</title>
+     <style>
+      /* d */
+      .container{
+        height: 100vh;
+        width: 100vw;
+        background-color: aquamarine;
+        border: 2px solid black;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .cards{
+        /* display: flex; */
+        /* height: 320px; */
+        height: 600px;
+       /* d */
+        /* background-image: linear-gradient(120deg,#333 0%,#989898); */
+        background-color: burlywood;
+     /* d */
+
+
+        width: 320px;
+        /* display: flex; */
+        border: 2px solid blue;
+
+      }
+      .cards img{
+        width: 100%;
+        /* height: 60%; */
+        height: 30%;
+        border: 2px solid black;
+
+
+      }
+      .cards h3{
+        /* font-size: 1.43em; */
+        font-size: 2.1em;
+        text-align: center;
+
+
+      }
+      .cards p{
+        font-size: medium;
+        text-align: center;
+      }
+      #amountBox{
+     /* d */
+     width: 80%;
+     height: 10%;
+     background-color: cornflowerblue;
+     /* padding-rightleft: 20px; */
+     /* padding-right: 30px; */
+     margin-left: 20px;
+     display: flex;
+     border-radius: 10px;
+     justify-content: space-between;
+      }
+      #paymentsd{
+        width: 80%;
+        /* height: 90%; */
+        height: 9%;
+        /* margin-left: 10px; */
+        margin-left: 20px;
+        /* padding-top: 10px; */
+        justify-content: space-between;
+        /* display: flex; */
+        font-size: 1.5em;
+        background-color: blueviolet;
+
+      }
+      .cancelbox{
+        /* font-size: 1.3em; */
+        /* font-size: 2.1em; */
+        font-size: 1.7em;
+        text-align: center;
+
+
+      }
+      /* #leftbo */
+      #leftBox{
+        /* height: 140%; */
+        width: fit-content;
+        display: flex;
+        /* gap: 20px; */
+        gap: 10px;
+        height: 100%;
+      }
+      #rightBox{
+        height: 100%;
+        /* width: 20%; */
+        padding-bottom: 20px;
+      }
+ /* d */
+
+
+
+     </style>
+</head>
+<body>
+   <!-- d} -->
+    <div class="container">
+        <div class="cards">
+            <img src="web_dev.img" alt="" srcset="">
+            <h3>order summary</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, quos? Alias, eius repellendus quidem in nulla ab assumenda iure expedita ea accusamus aliquid hic amet at soluta ipsum ipsa magnam!
+            </p>
+            <div id="amountBox">
+                <div id="leftBox">
+                    <img src="rose.jpeg" alt="" srcset="">
+                </div>
+                <div id="rightBox">
+                    <p>
+                        Amounts
+                    </p>
+                    <p>
+                        $99.99/yrour
+                    </p>
+                </div>
+                <!-- button payments -->
+                 <!-- d -->
+            </div>
+            <button id="paymentsd">
+                proceed to payments
+             </button>
+             <div class="cancelbox">
+                <a href="#">
+                    <!-- href -->
+                     cancel order
+                </a>
+             </div>c
+            <!-- d -->
+        </div>
+    </div>
+
+</body>
+</html>
