@@ -1,0 +1,30 @@
+import java.util.*;
+public class Operators {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if (a > b) {
+            System.out.println("true");
+        } else if (a == b) {
+            System.out.println("True");
+        } else {
+            System.out.println("false");
+        }
+
+//        }
+        int oper = sc.nextInt();
+        int n = 9;
+        int pos = 1;
+//        int oper = 1;
+        int BitMask = 1 << pos;
+        if (oper == 1) {
+            int newNumber = BitMask | n;
+            System.out.println(newNumber);
+        } else {
+            int newBitMask = ~(BitMask);
+            int newNumber = newBitMask & n;
+            System.out.println(newNumber);
+        }
+    }
+}
