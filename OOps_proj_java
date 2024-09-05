@@ -1,0 +1,53 @@
+//public class Oops_project {
+//    public static class Student {
+////        String name;
+////        int age;
+////    --Polymorphism
+//        public static void PrintInfo(String name) {
+//            System.out.println(name);
+////            System.out.println(age);
+//
+//        }
+//
+//        public static void PrintInfo(int age) {
+//            System.out.println(age);
+//        }
+//
+//        public void PrintInfo(String name, int age) {
+//            System.out.println(name + " and " + age);
+//        }
+
+//        public static void main(String args[]) {
+//            Student s1 = new Student();
+//            s1.PrintInfo("nasrullah", 21);
+
+//        }
+        class Shape {
+            String color;
+        }
+        class Triangle extends Shape {
+            //    int edge;
+            public void area(int l, int b) {
+                System.out.println(1 / 2 * l * b);
+            }
+        }
+        class Circle extends Shape{
+            public void area(int r){
+                    System.out.println(3.14*r*r);
+                }
+            }
+
+            public class Oops_project{
+
+            public static void main(String args[]){
+            Triangle t1=new Triangle();
+            t1.color="black";
+            t1.area(2,5);
+            System.out.println(t1);
+
+//            t1.area(6);
+
+            }
+}
+//        }
+//    }
