@@ -1,0 +1,127 @@
+-- Create the Database
+CREATE DATABASE MovieRecommendationSystem;
+
+-- Use the Database
+USE MovieRecommendationSystem;
+
+-- Create Users table
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(50),
+    Email VARCHAR(100)
+);
+
+-- Create Movies table
+CREATE TABLE Movies (
+    MovieID INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(255),
+   
+-- Insert data into Users table
+INSERT INTO Users (Username, Email)
+VALUES 
+('JohnDoe', 'john@example.com'),
+('JaneSmith', 'jane@example.com'),
+('AliceWonder', 'alice@example.com');
+
+-- Insert data into Movies table
+INSERT INTO Movies (Title, Genre, ReleaseYear)
+VALUES
+('Inception', 'Sci-Fi', 2010),
+('The Dark Knight', 'Action', 2008),
+('Interstellar', 'Sci-Fi', 2014),
+('The Matrix', 'Sci-Fi', 1999),
+('Pulp Fiction', 'Crime', 1994);
+
+-- Insert data into Ratings table
+INSERT INTO Ratings (UserID, MovieID, Rating, RatingDate)
+VALUES
+(1, 1, 5, '2024-09-01'),  -- JohnDoe rated Inception 5
+(1, 2, 4, '2024-09-02'),  -- JohnDoe rated The Dark Knight 4
+(2, 3, 5, '2024-09-03'),  -- JaneSmith rated Interstellar 5
+(2, 4, 4, '2024-09-04'),  -- JaneSmith rated The Matrix 4
+(3, 1, 5, '2024-09-05'),  -- AliceWonder rated Inception 5
+(3, 3, 4, '2024-09-06');  -- AliceWonder rated Interstellar 4
+
+
+SELECT 
+    Movies.Title, 
+    Ratings.Rating 
+FROM 
+    Ratings
+JOIN 
+    Movies ON Ratings.MovieID = Movies.MovieID
+WHERE 
+    Ratings.UserID = 1  -- User ID for JohnDoe
+AND 
+    Ratings.Rating >= 4;
+SELECT 
+    Movies.Title, 
+    AVG(Ratings.Rating) AS AverageRating 
+FROM 
+    Ratings
+JOIN 
+    Movies ON Ratings.MovieID = Movies.MovieID
+GROUP BY 
+    Movies.MovieID
+HAVING 
+    AVG(Ratings.Rating) >= 4
+ORDER BY 
+    AverageRating DESC;
+
+
+SELECT 
+    Movies.Title, 
+    AVG(Ratings.Rating) AS AverageRating
+FROM 
+    Ratings
+JOIN 
+    Movies ON Ratings.MovieID = Movies.MovieID
+WHERE 
+    Movies.MovieID NOT IN (SELECT MovieID FROM Ratings WHERE UserID = 1)  -- User ID 1 is JohnDoe
+GROUP BY 
+    Movies.MovieID
+HAVING 
+    AVG(Ratings.Rating) >= 4
+ORDER BY 
+    AverageRating DESC;
+
+
+SELECT 
+    DISTINCT U2.UserID, U2.Username
+FROM 
+    Ratings R1
+JOIN 
+    Ratings R2 ON R1.MovieID = R2.MovieID
+JOIN 
+    Users U2 ON R2.UserID = U2.UserID
+WHERE 
+    R1.UserID = 1  -- User ID for JohnDoe
+AND 
+    R1.UserID <> R2.UserID  -- Exclude JohnDoe from the results
+AND 
+    ABS(R1.Rating - R2.Rating) <= 1;  -- Similar rating (within 1 point)
+SELECT 
+    Movies.Title, 
+    AVG(Ratings.Rating) AS AverageRating
+FROM 
+    Ratings
+JOIN 
+    Movies ON Ratings.MovieID = Movies.MovieID
+WHERE 
+    Movies.Genre = 'Sci-Fi'  -- Specify genre
+GROUP BY 
+    Movies.MovieID
+ORDER BY 
+    AverageRating DESC
+LIMIT 5;
+SELECT 
+    Users.Username, 
+    COUNT(Ratings.RatingID) AS TotalRatings
+FROM 
+    Ratings
+JOIN 
+    Users ON Ratings.UserID = Users.UserID
+GROUP BY 
+    Users.UserID
+ORDER BY 
+    TotalRatings DESC;
