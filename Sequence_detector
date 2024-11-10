@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+class Transition {
+    String presentState;
+    String nextState;
+    String input;
+    String output;
+
+    public Transition(String presentState, String nextState, String input, String output) {
+        this.presentState = presentState;
+        this.nextState = nextState;
+        this.input = input;
+        this.output = output;
+    }
+}
+
+public class SequenceDetector {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Transition> transitions = new ArrayList<>();
+
+        // Read the transitions from input
+        while (scanner.hasNext()) {
+            String presentState = scanner.next();
+            String nextState = scanner.next();
+            String input = scanner.next();
+            String output = scanner.next();
+            transitions.add(new Transition(presentState, nextState, input, output));
+        }
+        scanner.close();
+
+        String sequence = detectSequence(transitions);
+        String detectorType = determineDetectorType(transitions);
+
+        System.out.println(sequence);
+        System.out.println(detectorType);
+    }
+
+    public static String detectSequence(List<Transition> transitions) {
+        StringBuilder sequence = new StringBuilder();
+        Map<String, List<Transition>> stateMap = new HashMap<>();
+
+        // Organize transitions by present state
+        for (Transition transition : transitions) {
+            stateMap.computeIfAbsent(transition.presentState, k -> new ArrayList<>()).add(transition);
+        }
+
+        String currentState = transitions.get(0).presentState;
+        for (Transition transition : transitions) {
+            if (transition.presentState.equals(currentState) && transition.output.equals("1")) {
+                sequence.append(transition.input);
+                currentState = transition.nextState;
+            }
+        }
+
+        return sequence.toString();
+    }
+
+    public static String determineDetectorType(List<Transition> transitions) {
+        String initialState = transitions.get(0).presentState;
+        String finalState = transitions.get(transitions.size() - 1).nextState;
+
+        // Check if it is a Non-Overlapping Detector
+        for (Transition transition : transitions) {
+            if (transition.presentState.equals(finalState) && transition.nextState.equals(initialState) && transition.output.equals("1")) {
+                return "Non Overlapping Sequence Detector";
+            }
+        }
+
+        // If not Non-Overlapping, it is Overlapping
+        return "Overlapping Sequence Detector";
+    }
+}
